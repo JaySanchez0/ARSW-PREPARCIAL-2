@@ -16,7 +16,7 @@ public class AirportsFinderCache {
 	 */
 	public boolean isValid(String name) {
 		//System.out.println(con.get(name));
-		if(con.get(name)!=null && System.currentTimeMillis()-con.get(name).getTime()<=1000*60*5) return true;
+		if(con.get(name)!=null && (System.currentTimeMillis()-con.get(name).getTime())<=(1000*60*5)) return true;
 		return false;
 	}
 	/**
