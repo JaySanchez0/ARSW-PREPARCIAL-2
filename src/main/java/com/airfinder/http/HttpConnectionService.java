@@ -11,7 +11,11 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class HttpConnectionService {
-
+	/**
+	 * 
+	 * @param name nombre del aeropuerto
+	 * @return objeto json con la info de los aeropuertos
+	 */
 	public String getAirports(String name) {
 		try {
 			HttpResponse<String> response = Unirest.get("https://cometari-airportsfinder-v1.p.rapidapi.com/api/airports/by-text?text="+name)
