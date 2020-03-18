@@ -14,6 +14,11 @@ import com.airfinder.services.AirportsFinderServices;
 public class AirportsFinderController {
 	@Autowired
 	private AirportsFinderServices services;
+	/**
+	 * 
+	 * @param name Nombre del aeropuerto
+	 * @return Los aeropuertos que tienen este nombre
+	 */
 	@RequestMapping(value="/{name}")
 	public ResponseEntity<?> getAirport(@PathVariable String name){
 		return new ResponseEntity<>(services.getAirposts(name),HttpStatus.ACCEPTED);

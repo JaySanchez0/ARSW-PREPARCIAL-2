@@ -13,7 +13,11 @@ public class AirportsFinderServices {
 	private AirportsFinderCache cache;
 	@Autowired
 	private HttpConnectionService service;
-	
+	/**
+	 * 
+	 * @param name nombre del aeropuerto
+	 * @return los aeropuertos con este nombre
+	 */
 	public String getAirposts(String name) {
 		if(cache.isValid(name)) {
 			return cache.getJsons(name);
